@@ -8,7 +8,8 @@ React Task Tracker
 Sample Webpage  
 FreeCodeCamp Product Landing Page  
 FreeCodeCamp Technical Documentation Page  
-FreeCodeCamp Survey Form
+FreeCodeCamp Survey Form  
+FreeCodeCamp Tribute Page
 
 ## In progress
 Nisa's Landing Page
