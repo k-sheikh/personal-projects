@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>FCC: Survey Form</title>
+	</head>
+	<body>
+        <h1 id="title"> How FIT are you? </h1>
+
+<p id="description"> Thank you for taking the time to fill in this survey </p>
+
+<div id="body">
+<form id="survey-form">
+  
+  <label id="name-label" for="name">
+  <p> Name: </p>
+  </label>
+  
+  <input id="name" type="text" placeholder="Enter your name" required>
+  
+  <label id="number-label" for="number">
+  <p> Age: </p>
+  </label>
+  
+  <input id="number" type="number" placeholder="Enter your age" min="10" max="50" required>
+  
+  <label id="email-label" for="email">
+  <p> Email: </p>
+  </label>
+  
+  <input id="email" type="email" placeholder="Enter your email" required>
+  
+  <p> What is your main goal for training? </p>
+  <select id="dropdown">
+    
+    <option value="default"> I don't have a goal </option>
+    <option value="Build muscle mass"> Build muscle mass</option>
+    <option value="Lose body fat"> Lose body fat </option>
+    <option value="Build strength"> Build strength </option>
+    <option value="Build stamina"> Build stamina </option>
+    <option value="General overall fitness"> General overall fitness </option>
+    
+  </select>
+  
+  <p> How often do you train? </p>
+
+  <input type="radio" name="training-days" value="1"> Once a week </input> <br>
+  <input type="radio" name="training-days" value="2"> Twice a week </input> <br>
+  <input type="radio" name="training-days" value="3"> Three times a week </input> <br>
+  <input type="radio" name="training-days" value="4"> Four times a week </input> <br>
+  <input type="radio" name="training-days" value="5"> Five times a week </input> <br>
+  <input type="radio" name="training-days" value="6"> Six times a week </input> <br>
+  <input type="radio" name="training-days" value="7"> Everyday </input>
+
+  <p> Which muscle groups do you train regularly? </p>
+
+  <input type="checkbox" name="muscle-group" value="1"> Chest </input> <br>
+  <input type="checkbox" name="muscle-group" value="2"> Back </input> <br>
+  <input type="checkbox" name="muscle-group" value="3"> Biceps </input> <br>
+  <input type="checkbox" name="muscle-group" value="4"> Triceps </input> <br>
+  <input type="checkbox" name="muscle-group" value="5"> Shoulders </input> <br>
+  <input type="checkbox" name="muscle-group" value="6"> Legs </input> <br>
+  <input type="checkbox" name="muscle-group" value="7"> Calves </input> <br>
+  <input type="checkbox" name="muscle-group" value="8"> Abs </input>
+
+  <textarea id="comment" rows="2" cols="50" placeholder="Any other muscle groups?"></textarea>
+
+  <p> Which of the following pieces of equipment do you have access to? </p>
+
+  <input type="checkbox" name="equipment" value="1"> No equipment - bodyweight only </input> <br>
+  <input type="checkbox" name="equipment" value="2"> Some light weights </input> <br>
+  <input type="checkbox" name="equipment" value="3"> Home gym </input> <br>
+  <input type="checkbox" name="equipment" value="4"> Gym membership </input> <br>
+
+  <textarea id="comment" rows="2" cols="50" placeholder="Any other equipment?"></textarea> <br> <br>
+  <input id="submit" type="submit" value="SUBMIT FORM">
+
+</form>
+</div>
+    </body>
+</html>
