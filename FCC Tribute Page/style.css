@@ -1,0 +1,30 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 40px;
+}
+
+h2 {
+	font-family: Arial;
+}
+
+p {
+	font-family: Sans-serif;
+}
+
+#image {
+	max-width: 50%;
+	display: block;
+	margin: auto;
+}
+
+#img-caption {
+	font-style: italic;
+}
+
+#tribute-link {
+	font-weight: bold;
+}
