@@ -6,7 +6,8 @@ This repo is a collection of personal projects I have accumulated during my codi
 NodeJS CLI Game  
 React Task Tracker  
 Sample Webpage  
-FreeCodeCamp Product Landing Page
+FreeCodeCamp Product Landing Page  
+FreeCodeCamp Technical Documentation Page
 
 ## In progress
 Nisa's Landing Page
