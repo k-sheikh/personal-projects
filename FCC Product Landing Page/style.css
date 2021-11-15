@@ -1,0 +1,136 @@
+body {
+	font-family: arial;
+	background-color: #b3b3b3;
+	margin: 0px;
+}
+
+#header {
+	background-color: #696969;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: fixed;
+}
+
+#header-img {
+	width: 150px;
+	height: 100px;
+}
+
+#nav-bar {
+	width: 100%;
+}
+
+.links {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+.nav-link {
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 18px 50px;
+	transition: background 1s ease;
+}
+
+.nav-link:hover {
+	background-color: #00ccff;
+}
+
+.sign-up-form {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#form {
+	text-align: center;
+	margin-bottom: 25;
+}
+
+#email {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+	width: 170px;
+	padding: 10px;
+	border-radius: 50px;
+	border: none;
+	background-color: #696969;
+	transition: width 1s ease, background 1s ease;
+	font-size: 15px;
+}
+
+#email::placeholder {
+	color: white;
+}
+
+#email:hover {
+	background-color: #00ccff;
+	width: 300px;
+}
+
+#submit {
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	width: 80px;
+	padding: 10px;
+	border-radius: 50px;
+	border: none;
+	background-color: #696969;
+	transition: background 1s ease;
+	color: white;
+	font-size: 15px;
+}
+
+#submit:hover {
+	background-color: #00ccff;
+}
+
+.text {
+	width: 1000px;
+	margin: auto;
+	margin-bottom: 100px;
+}
+
+p {
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.video-page {
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+}
+
+#video {
+	margin: auto;
+	display: block;
+	margin-bottom: 100px;
+	background-color: #696969;
+	transition: background 1s ease;
+	padding: 5px;
+}
+
+#video:hover {
+	background-color: #00ccff;
+}
+.gym-equipment {
+	height: 500px;
+	background-image: url("https://i.pinimg.com/originals/2d/42/69/2d42698245c16177a33bfec2f7f6addb.jpg");
+}
+
+@media only screen and (max-width: 600px) {
+	#nav-bar {
+		display: none;
+	}
+}
