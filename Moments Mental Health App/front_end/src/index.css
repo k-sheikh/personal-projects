@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* margin-bottom: 50px; */
+}
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fredoka+One&family=Roboto&display=swap');
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.preview {
+  display: flex;
+  max-width:200px;
+  margin: auto;
+  margin-bottom: 25px;
+  border-radius: 2rem;
+}
+
+/* Modals */
+/* .closeModalIcon {
+  cursor: pointer;
+  max-height: 50px;
+  color: green;
+} */
+
+/* .formButton { 
+  margin: auto;
+  display: flex;
+} */
+
+h3 {
+  font-family: "Fredoka One", cursive;
+  font-size: 2rem;
+}
+
+/* links */
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* .modal-form {
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  width: 15rem;
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--blue);
+  transition: background 1s ease;
+  font-size: 1rem;
+  color: white;
+}
+
+.modal-form::placeholder {
+  color: white;
+}
+
+.modal-form:hover {
+  background-color: var(--red);
+} */

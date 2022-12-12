@@ -1,0 +1,25 @@
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-right: 15px; */
+  background-color: #a8dadc;
+  font-family: "Caveat", cursive;
+  width: 100%;
+  border-bottom: 0.5rem solid #1d3557;
+}
+
+.logo {
+  max-height: 100px;
+}
+
+
+
+/* .btn--blue {
+  background-color: var(--powderblue);
+  color: var(--darkblue);
+  border: 2px solid var(--powderblue);
+  font-family: "Caveat", cursive;
+  font-size: 30px;
+} */

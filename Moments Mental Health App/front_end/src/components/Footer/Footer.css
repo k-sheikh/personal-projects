@@ -1,0 +1,21 @@
+.footer {
+    height: 150px;
+    text-align: center;
+    background-color: #a8dadc;
+    width: 100%;
+    overflow: hidden;
+    border-top: 0.5rem solid #1d3557;
+}
+
+.footer h1 {
+    display: inline-block;
+    padding: 0rem 2rem 0rem;
+    border-radius: 2px;
+    font-size: 2.4rem;
+    transition: transform 0.3s ease-out;
+}
+
+.footer h1:hover {
+    transform: translateY(1rem);
+    color: #e63946;
+}

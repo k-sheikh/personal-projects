@@ -1,0 +1,99 @@
+.gallery {
+  max-width: 100%;
+  background-image: linear-gradient(to right, #457b9d, #5a94a9, #78adb3, #9cc4bf, #c1dbd0, #c1dbd0, #c1dbd0, #c1dbd0, #9cc4bf, #78adb3, #5a94a9, #457b9d);
+}
+
+.gallery-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: white; */
+}
+
+.moment-card {
+  background-image: linear-gradient(45deg, #c9dbdc 0%, #FFFFFF 100%);
+  border: 1rem solid #1d3557;
+  border-radius: 2rem;
+  margin: 2.5rem;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 100px 300px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "moment-text"
+    "moment-image";
+}
+.moment-image {
+  grid-area: moment-image;
+  max-width: 300px;
+  max-height: 300px;
+  margin: auto;
+  border-radius: 2rem;
+  /* padding-top: 20px; */
+  /* padding-bottom: 20px; */
+}
+
+.moment-text {
+  font-size: 1.2rem;
+  border: none;
+  margin: 1rem 0 1rem 0.5rem;
+  text-align: center;
+}
+
+.photo-icon {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+.moment-card > h1, h2, h3, h5 {
+  font-weight: 200;
+  font-size: 20px;
+  margin: 0.25rem;
+}
+
+.selection-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "select-previous selection-card select-next";
+}
+
+.selection-card {
+  grid-area: selection-card;
+}
+
+.select-next, .select-previous {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.select-previous {grid-area: select-previous;}
+
+.select-next {grid-area: select-next;}
+.moment-no-moment-container {
+  overflow: hidden;
+  height: 71.6vh;
+  background-image: linear-gradient(to right, #457b9d, #5a94a9, #78adb3, #9cc4bf, #c1dbd0, #c1dbd0, #c1dbd0, #c1dbd0, #9cc4bf, #78adb3, #5a94a9, #457b9d);
+}
+.moment-card-no-moment {
+  background-image: linear-gradient(45deg, #c9dbdc 0%, #FFFFFF 100%);
+  border: 1rem solid #1d3557;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin:auto;
+  margin-top: 200px;
+  margin-bottom: 25px;
+  width: 300px;
+  display: grid;
+  gap: 0px 0px;
+  grid-template-areas:
+    "moment-text"
+    "moment-image";
+}

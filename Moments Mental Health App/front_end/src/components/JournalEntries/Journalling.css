@@ -1,0 +1,118 @@
+.entry-title {
+    display: block;
+    margin: none;
+    margin-top: 1rem;
+    width: 29rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1faee;
+    transition: background 1s ease;
+    font-size: 1.4rem;
+}
+
+.entry-title:hover {
+    background-color: #c4edee;
+}
+
+.entry-body {
+    display: block;
+    text-align: left;
+    margin: 1rem 0 1rem 0;
+    height: 20rem;
+    width: 29rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1faee;
+    transition: background 1s ease;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.guided-prompt {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.entry-body:hover {
+    background-color: #c4edee;
+}
+
+.entry-attach {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* .journal-entry {
+    align-items: center;
+    background-color: pink;
+    border: 2rem;
+} */
+.card {
+    /* margin-top:-4px; */
+    /* margin-bottom: -5px; */
+    background-image: linear-gradient(45deg, #c9dbdc 0%, #FFFFFF 100%);
+    border: 1rem solid #1d3557;
+    border-radius: 2rem;
+    margin: 2.5rem;
+    padding: 2rem;
+    /* margin-bottom: 3rem; */
+    /* display: flex; */
+    
+}
+
+.gallery {
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* align-items: center; */
+    max-width: 100%;
+    background-image: linear-gradient(to right, #457b9d, #5a94a9, #78adb3, #9cc4bf, #c1dbd0, #c1dbd0, #c1dbd0, #c1dbd0, #9cc4bf, #78adb3, #5a94a9, #457b9d);
+  }
+
+  .gallery-container {
+    /* display: flex; */
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    /* background-color: white; */
+  }
+.journal-text {
+    font-size: 1.2rem;
+    border: none;
+    /* margin: 1rem 0 1rem 0.5rem; */
+    margin: auto;
+}
+.entry-image {
+    margin: auto;
+    border-radius: 2rem;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.no-entry-card {
+    background-image: linear-gradient(45deg, #c9dbdc 0%, #FFFFFF 100%);
+    padding: 2rem;
+    margin:auto;
+    margin-top: 150px;
+    margin-bottom: 25px;
+    height: 200px;
+    width: 400px;
+    display: grid;
+    gap: 0px 0px;
+    background: transparent;
+    grid-template-areas:
+      "moment-text"
+      "moment-image";
+    align-self: center;
+    
+}
+.no-entry-card-container {
+    overflow: hidden;
+  height: 71.6vh;
+  
+  /* background-image: linear-gradient(to right, #457b9d, #5a94a9, #78adb3, #9cc4bf, #c1dbd0, #c1dbd0, #c1dbd0, #c1dbd0, #9cc4bf, #78adb3, #5a94a9, #457b9d); */
+}
