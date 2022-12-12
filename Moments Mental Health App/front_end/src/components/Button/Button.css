@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+:root {
+  --blue: #457b9d;
+  --red: #e63946;
+  --white: #ffffff;
+  --darkblue: #1d3557;
+  --powderblue: #a8dadc;
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 4px;
+  margin: auto;
+  outline: none;
+}
+
+/* .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px #435058ff;
+} */
+
+.btn--blue {
+  background-color: var(--powderblue);
+  color: var(--darkblue);
+  border: 2px solid var(--powderblue);
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-right: 1rem;
+  transition: background 0.5s ease-out, color 0.5s ease-out
+}
+
+.btn--blue:hover {
+  background-color: var(--blue);
+  color: var(--powderblue);
+}
+
+.btn--darkblue {
+  background-color: var(--darkblue);
+  color: var(--powderblue);
+  /* border: 2px solid var(--darkblue); */
+  border-radius: 4rem;
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  padding: 2rem;
+  margin-right: 1rem;
+  transition: background 0.5s ease-out, color 0.5s ease-out
+}
+
+.btn--darkblue:hover {
+  background-color: var(--red);
+  color: var(--powderblue);
+}
+
+.btn--red {
+  background-color: var(--red);
+  color: var(--white);
+  border: 2px solid var(--red);
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+/* .btn--medium {
+  padding: 10px 20px;
+  font-size: 18px;
+} */
+
+/* .btn--small {
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 20px 40px;
+  margin-bottom: 25px;
+  font-size: 25px;
+} */

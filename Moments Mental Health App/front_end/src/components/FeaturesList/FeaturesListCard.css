@@ -1,0 +1,42 @@
+.FeatureListVerticalContainer {
+    max-width: 1000px;
+    /* max-height:1200px; */
+    /* align-self: center; */
+    /* background-color:blue; */
+    padding: 10px;
+    margin: auto;
+}
+
+.FeatureListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* margin: 2rem 4rem; */
+    text-align: center;
+}
+
+.FeatureListCard {
+    padding: 0rem 2rem 4.5rem;
+    /* align-items: center; */
+    min-width: 300px;
+    max-width: 400px;
+    /* text-align: center; */
+    
+}
+
+.FeatureListImage {
+    height: 50px;
+    width: 100px;
+    margin: auto;
+    display: block;
+}
+
+.FeatureListCard > h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+}
+
+.FeatureListCard > h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
