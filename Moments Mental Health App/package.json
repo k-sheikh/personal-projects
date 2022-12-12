@@ -1,0 +1,25 @@
+{
+  "name": "moments",
+  "version": "1.0.0",
+  "description": "Too much going on? Starting to lose perspective? Feeling anxious and don’t know what to do next? Take a (virtual) walk down memory lane in our app to reminisce on all the important moments in your life. A private and secure space to document your thoughts, fears, failures, accomplishments and key life moments.",
+  "main": "index.js",
+  "proxy": "http://localhost:8000/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"cd back_end/moments && python manage.py runserver\" \"cd front_end && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zmervey18/Moments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zmervey18/Moments/issues"
+  },
+  "homepage": "https://github.com/zmervey18/Moments#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  }
+}
