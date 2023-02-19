@@ -2,7 +2,7 @@
 
 A python program that uses SQLite to access and manage the inventory for a small bookstore.\
 New items can be added to the database and existing items can be updated and/or replaced.\
-Functionality to search books by title or author.
+Functionality is included to search books by title or author using partial keywords.
 
 ## Installation and use
 
