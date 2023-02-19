@@ -3,6 +3,7 @@
 This repo is a collection of personal projects I have accumulated during my coding learning journey.
 
 ## Completed
+
 NodeJS CLI Game  
 React Task Tracker  
 Sample Webpage  
@@ -12,8 +13,9 @@ FreeCodeCamp Survey Form
 FreeCodeCamp Tribute Page  
 FreeCodeCamp Personal Portfolio Page\
 Moments Mental Health App\
-Stock-taking App\
+Stock Checker App\
 Task Manager App
 
 ## In progress
+
 Nisa's Landing Page
