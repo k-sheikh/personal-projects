@@ -3,7 +3,7 @@
 A python program for a SME that can help it to manage tasks assigned to each member of a team.\
 The admin can create multiple accounts for different team members and assign tasks.\
 Non-admin users can add/create/complete tasks or reassign them to other team members.\
-The data used in the app is read and written from '.txt' files.
+The data used in the app is read from and written to '.txt' files.
 
 ## Installation and use
 
