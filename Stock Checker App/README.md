@@ -2,7 +2,8 @@
 
 A python program for a SME that can help it to manage its inventory.\
 New items can be added to the database and existing items can be updated and/or replaced.\
-Functionality included to pull low-stock items for stock replenishment and high-stock items for sale events.
+Functionality included to pull low-stock items for stock replenishment and high-stock items for sale events.\
+The data used in this app is read and written from a '.txt' file.
 
 ## Installation and use
 
