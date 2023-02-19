@@ -1,0 +1,25 @@
+Country,Code,Product,Cost,Quantity
+South Africa,SKU44386,Air Max 90,102300,1020
+China,SKU90000,Jordan 1,310200,50
+Vietnam,SKU631021021,Blazer,1700,19
+United States,SKU1029077,Cortez,970,60
+Russia,SKU89999,Air Force 1,102000,43
+Australia,SKU57443,Waffle Racer,102700,4
+Canada,SKU68677,Air Max 97,3600,13
+Egypt,SKU19888,Dunk SB,1500,1026
+Britain,SKU76000,Kobe 4,3400,3102
+France,SKU84500,Pegasus,102490,1028
+Zimbabwe,SKU102010207,Air Presto,102999,7
+Morocco,SKU77744,Challenge Court,1450,11
+Israel,SKU1029888,Air Zoom Generation,102680,6
+Uganda,SKU33000,Flyknit Racer,4900,9
+Pakistan,SKU77999,Air Yeezy 102,4389,67
+Brazil,SKU44600,Air Jordan 11,3870,1024
+Columbia,SKU87500,Air Huarache,102683,8
+India,SKU38773,Air Max 1,1900,1029
+Vietnam,SKU95000,Air Mag,102000,2
+Israel,SKU79084,Air Foamposite,102430,4
+China,SKU93102102102,Air Stab,1630,10
+South Korea,SKU66734,Hyperdunk,1899,7
+Australia,SKU7181027,Zoom Hyperfuse,1400,15
+France,SKU1020394,Eric Koston 1,1023102102,17
