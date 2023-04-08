@@ -13,7 +13,7 @@ class Shoe:
         self.product = product
         self.cost = cost
         self.quantity = quantity
-        
+
     def get_cost(self):
         return self.cost
 
@@ -35,10 +35,10 @@ shoe_list = []
 def read_shoes_data():
 
     with open("inventory.txt", "r", encoding = "utf-8") as f:
-        
+
         # Skip the first i
         next(f)
-        
+
         # Perform operations on the rest of the file
         for i in f:
             i = i.strip().split(",")
@@ -53,19 +53,39 @@ def capture_shoes():
     # User input
     country = input("\nPlease enter the product country: ")
 
-    code = input("Please enter the product code: ")
+    # Check if product code is an integer
+    while True:
+        try:
+            code = int(input("Please enter the product code: "))
+            code = "SKU" + str(code)
+            pass
+        except ValueError:
+            print("\nSorry. That is not a valid input. Please enter an integer value.")
+            continue
+        else:
+            break
+
     # Check if product code exists
     while any(code in sublist for sublist in shoe_list):
-        print("Sorry, this code already exists.")
-        code = input("Please enter the product code: ")
-    
+        print("\nSorry, this code already exists.")
+        while True:
+            try:
+                code = int(input("Please enter the product code: "))
+                code = "SKU" + str(code)
+                pass
+            except ValueError:
+                print("\nSorry. That is not a valid input. Please enter an integer value.")
+                continue
+            else:
+                break
+
     product = input("Please enter the product name: ")
     # Check if product name exists
     while any(product in sublist for sublist in shoe_list):
         print("Sorry, this product already exists.")
         product = input("Please enter the product name: ")
 
-    # Check if cost is an integer    
+    # Check if cost is an integer
     while True:
         try:
             cost = int(input("Please enter the product cost: "))
@@ -86,7 +106,7 @@ def capture_shoes():
             continue
         else:
             break
-    
+
     # Append to shoe list
     shoe_list.append(Shoe(country, code, product, cost, quantity).__str__())
 
@@ -220,7 +240,7 @@ Quantity:\t{search_code_list[4]}""")
 
 # Logic for menu
 def menu():
-    
+
     menu = input('''\nPlease select one of the following options:
 c\t- Capture shoe data
 v\t- View all shoes
@@ -262,5 +282,5 @@ e\t- Exit
 #==========Main Menu=============
 
 while True:
-    
+
     menu()
