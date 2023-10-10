@@ -1,3 +1,7 @@
+#-----LIBRARIES-----
+
+import random
+
 # -----CLASSES-----
 
 # Parent class
@@ -49,3 +53,67 @@ class SavingsAccount(Bank):
     def apply_interest(self, amount):
         self.balance += (self.balance * self.interest_rate)
         return self.balance
+
+
+# -----FUNCTIONS-----
+
+# Account number generator
+
+def acc_num_generator():
+    acc_num = 
+
+# Register new user
+
+def registration():
+    forename = input("Enter your forename: ")
+    surname = input("Enter your surname: ")
+    user_id = input("Create a user id: ")
+    password = input("Create a password: ")
+    password2 = input("Re-enter your password: ")
+
+    while password2 != password:
+        print("The passwords do not match, please try again")
+        password = input("Create a password: ")
+        password2 = input("Re-enter your password: ")
+
+    print("Account created successfully")
+
+
+registration()
+
+
+# Login
+
+
+def login():
+    user_id = input("Enter user_id: ")
+    password = input("Enter password: ")
+
+
+# login()
+
+# -----MAIN PROGRAM-----
+
+user_id = Bank('val1_user_id', 'val2_password',
+               'val3_forename', 'val4_surname', 'val5_acc_num')
+# print(user_id.user_id)
+# print(user_id.user_id)
+
+acc_num = SavingsAccount('val1_user_id', 'val2_password',
+                         'val3_forename', 'val4_surname', 'val5_acc_num')
+
+# print(acc_num.password)
+
+
+# Input
+
+# user_id = input("Enter user_id: ")
+# password = input("Enter password: ")
+# forename = input("Enter forename: ")
+# surname = input("Enter surname: ")
+# acc_num = int(input("Enter account number: "))
+
+# print(user_id, password, forename, surname, acc_num)
+
+# test_new_acc = SavingsAccount(user_id, password, forename, surname, acc_num)
+# print(type(test_new_acc))
