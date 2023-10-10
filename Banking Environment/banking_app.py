@@ -79,7 +79,15 @@ def registration():
         password = input("Create a password: ")
         password2 = input("Re-enter your password: ")
 
+    acc_num = acc_num_generator()
+
     print("Account created successfully")
+    print(f"""Account details:
+          Forename:\t{forename}
+          Surname:\t{surname}
+          User ID:\t{user_id}
+          Acc No:\t{acc_num}
+          Acc Type:\tPLACEHOLDER""")
 
 
 registration()
