@@ -1,10 +1,12 @@
-#-----LIBRARIES-----
+# -----LIBRARIES-----
 
 import random
 
 # -----CLASSES-----
 
 # Parent class
+
+
 class Bank:
     def __init__(self, user_id, password, forename, surname, acc_num):
         self.user_id = user_id
@@ -60,9 +62,10 @@ class SavingsAccount(Bank):
 # Account number generator
 
 def acc_num_generator():
-    acc_num = 
+    return random.randint(100000, 999999)
 
 # Register new user
+
 
 def registration():
     forename = input("Enter your forename: ")
