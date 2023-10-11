@@ -2,11 +2,12 @@
 
 import random
 
+users = {}
 # users = {user_id: {forename: 'John', surname: 'Smith', password: 'abc123',
 #                    accounts: {acc_num: {acc_type: "Current Account", balance: 1000}}}}
 
-# -----CLASSES-----
 
+# -----CLASSES-----
 
 # Parent class
 class Bank:
@@ -35,6 +36,11 @@ class Bank:
     @staticmethod
     def acc_num_generator():
         return random.randint(100000, 999999)
+
+    @staticmethod
+    def validate_password(password):
+        # Ensure password is >= 8 chars and contains a number
+        return len(password) >= 8 and any(char.isdigit() for char in password)
 
 
 # Child class
@@ -66,8 +72,8 @@ class SavingsAccount(Bank):
 # -----FUNCTIONS-----
 
 # Account number generator
-def acc_num_generator():
-    return random.randint(100000, 999999)
+# def acc_num_generator():
+#     return random.randint(100000, 999999)
 
 
 # Register new user
@@ -83,7 +89,7 @@ def registration():
         password = input("Create a password: ")
         password2 = input("Re-enter your password: ")
 
-    acc_num = acc_num_generator()
+    acc_num = Bank.acc_num_generator()
 
     print("Account created successfully")
     print(f"""Account details:
