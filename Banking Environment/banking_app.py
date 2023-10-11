@@ -2,11 +2,13 @@
 
 import random
 
+# users = {user_id: {forename: 'John', surname: 'Smith', password: 'abc123',
+#                    accounts: {acc_num: {acc_type: "Current Account", balance: 1000}}}}
+
 # -----CLASSES-----
 
+
 # Parent class
-
-
 class Bank:
     def __init__(self, user_id, password, forename, surname, acc_num):
         self.user_id = user_id
@@ -30,6 +32,10 @@ class Bank:
     def check_balance(self):
         return self.balance
 
+    @staticmethod
+    def acc_num_generator():
+        return random.randint(100000, 999999)
+
 
 # Child class
 class CurrentAccount(Bank):
@@ -52,7 +58,7 @@ class SavingsAccount(Bank):
         self.acc_type = "Savings Account"
         self.interest_rate = 0.05
 
-    def apply_interest(self, amount):
+    def apply_interest(self):
         self.balance += (self.balance * self.interest_rate)
         return self.balance
 
@@ -60,13 +66,11 @@ class SavingsAccount(Bank):
 # -----FUNCTIONS-----
 
 # Account number generator
-
 def acc_num_generator():
     return random.randint(100000, 999999)
 
+
 # Register new user
-
-
 def registration():
     forename = input("Enter your forename: ")
     surname = input("Enter your surname: ")
@@ -89,19 +93,17 @@ def registration():
           Acc No:\t{acc_num}
           Acc Type:\tPLACEHOLDER""")
 
-
-registration()
+# registration()
 
 
 # Login
-
 
 def login():
     user_id = input("Enter user_id: ")
     password = input("Enter password: ")
 
-
 # login()
+
 
 # -----MAIN PROGRAM-----
 
