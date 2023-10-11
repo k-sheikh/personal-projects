@@ -39,7 +39,7 @@ class Bank:
 
     @staticmethod
     def validate_password(password):
-        # Ensure password is >= 8 chars and contains a number
+        # Ensure password is >= 8 chars, alphanumeric and includes upper and lowercase letters
         return (len(password) >= 8 and
                 any(char.isdigit() for char in password) and
                 any(char.isalpha() for char in password) and
@@ -75,9 +75,12 @@ class SavingsAccount(Bank):
 
 # -----FUNCTIONS-----
 
-# Account number generator
-# def acc_num_generator():
-#     return random.randint(100000, 999999)
+# Read
+
+# Write
+def write_file():
+    with open("example.txt", "a", encoding="utf-8") as f:
+        f.write(f"some stuff")
 
 
 # Create new password
@@ -105,6 +108,20 @@ def registration():
 
     acc_num = Bank.acc_num_generator()
 
+    acc_type = input("""What account would you like to open?
+1 -\tCurrent Account
+2 -\tSavings Account
+Enter: """)
+    while acc_type not in ["1", "2"]:
+        print("Invalid input, please try again")
+
+    if acc_type == "1":
+        new_account = CurrentAccount(
+            user_id, password, forename, surname, acc_num)
+    elif acc_type == "2":
+        new_account = SavingsAccount(
+            user_id, password, forename, surname, acc_num)
+
     print("Account created successfully")
     print(f"""Account details:
 Forename:\t{forename}
@@ -120,6 +137,7 @@ def login():
     password = input("Enter password: ")
 
 
+# Main menu
 def main_menu():
     main_menu_option = input("""\nPlease select from one of the following options:
 1 -\tLogin
