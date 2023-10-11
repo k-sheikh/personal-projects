@@ -35,7 +35,7 @@ class Bank:
 
     @staticmethod
     def acc_num_generator():
-        return random.randint(100000, 999999)
+        return random.randint(10000000, 99999999)
 
     @staticmethod
     def validate_password(password):
@@ -80,22 +80,22 @@ class SavingsAccount(Bank):
 def validate_new_password():
     password = input("Create a password: ")
     while not Bank.validate_password(password):
-        print("""Passwords must be alphanumerical and at least 8 characters with upper and lowercase letters
-              Please try again""")
+        print("""\nPasswords must be alphanumerical and at least 8 characters with upper and lowercase letters
+Please try again\n""")
         password = input("Create a password: ")
     return password
 
 
 # Register new user
 def registration():
-    forename = input("Enter your forename: ")
+    forename = input("\nEnter your forename: ")
     surname = input("Enter your surname: ")
     user_id = input("Create a user id: ")
 
     password = validate_new_password()
     password2 = input("Re-enter your password: ")
     while not password2 == password:
-        print("The passwords do not match, please try again")
+        print("\nThe passwords do not match, please try again\n")
         password = validate_new_password()
         password2 = input("Re-enter your password: ")
 
@@ -103,46 +103,39 @@ def registration():
 
     print("Account created successfully")
     print(f"""Account details:
-          Forename:\t{forename}
-          Surname:\t{surname}
-          User ID:\t{user_id}
-          Acc No:\t{acc_num}
-          Acc Type:\tPLACEHOLDER""")
-
-# registration()
+Forename:\t{forename}
+Surname:\t{surname}
+User ID:\t{user_id}
+Acc No:\t\t{acc_num}
+Acc Type:\tPLACEHOLDER""")
 
 
 # Login
-
 def login():
     user_id = input("Enter user_id: ")
     password = input("Enter password: ")
 
-# login()
+
+def main_menu():
+    main_menu_option = input("""\nPlease select from one of the following options:
+1 -\tLogin
+2 -\tCreate new account
+0 -\tExit
+Enter:  """)
+
+    if main_menu_option == "1":
+        login()
+    elif main_menu_option == "2":
+        registration()
+    elif main_menu_option == "0":
+        exit()
+    else:
+        print("Invalid input, please try again\n")
 
 
 # -----MAIN PROGRAM-----
 
-user_id = Bank('val1_user_id', 'val2_password',
-               'val3_forename', 'val4_surname', 'val5_acc_num')
-# print(user_id.user_id)
-# print(user_id.user_id)
+print("\nWelcome to FatWest Bank")
 
-acc_num = SavingsAccount('val1_user_id', 'val2_password',
-                         'val3_forename', 'val4_surname', 'val5_acc_num')
-
-# print(acc_num.password)
-
-
-# Input
-
-# user_id = input("Enter user_id: ")
-# password = input("Enter password: ")
-# forename = input("Enter forename: ")
-# surname = input("Enter surname: ")
-# acc_num = int(input("Enter account number: "))
-
-# print(user_id, password, forename, surname, acc_num)
-
-# test_new_acc = SavingsAccount(user_id, password, forename, surname, acc_num)
-# print(type(test_new_acc))
+while True:
+    main_menu()
