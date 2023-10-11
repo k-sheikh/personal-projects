@@ -81,12 +81,22 @@ def registration():
     forename = input("Enter your forename: ")
     surname = input("Enter your surname: ")
     user_id = input("Create a user id: ")
-    password = input("Create a password: ")
-    password2 = input("Re-enter your password: ")
 
-    while password2 != password:
+    password = input("Create a password: ")
+    while not Bank.validate_password(password):
+        print("""Passwords must be alphanumerical and at least 8 characters with upper and lowercase letters
+              Please try again""")
+        password = input("Create a password: ")
+
+    password2 = input("Re-enter your password: ")
+    while not password2 == password:
         print("The passwords do not match, please try again")
         password = input("Create a password: ")
+        while not Bank.validate_password(password):
+            print("""Passwords must be alphanumerical and at least 8 characters with upper and lowercase letters
+                  Please try again""")
+            password = input("Create a password: ")
+
         password2 = input("Re-enter your password: ")
 
     acc_num = Bank.acc_num_generator()
