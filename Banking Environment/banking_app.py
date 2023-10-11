@@ -76,6 +76,16 @@ class SavingsAccount(Bank):
 #     return random.randint(100000, 999999)
 
 
+# Create new password
+def validate_new_password():
+    password = input("Create a password: ")
+    while not Bank.validate_password(password):
+        print("""Passwords must be alphanumerical and at least 8 characters with upper and lowercase letters
+              Please try again""")
+        password = input("Create a password: ")
+    return password
+
+
 # Register new user
 def registration():
     forename = input("Enter your forename: ")
