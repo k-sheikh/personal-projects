@@ -79,8 +79,8 @@ class SavingsAccount(Bank):
 
 # Write
 def write_file():
-    with open("example.txt", "a", encoding="utf-8") as f:
-        f.write(f"some stuff")
+    with open("example.txt", "w", encoding="utf-8") as f:
+        f.write(str(users))
 
 
 # Create new password
@@ -95,40 +95,56 @@ Please try again\n""")
 
 # Register new user
 def registration():
-    forename = input("\nEnter your forename: ")
-    surname = input("Enter your surname: ")
     user_id = input("Create a user id: ")
+    if user_id not in users:
+        forename = input("\nEnter your forename: ")
+        surname = input("Enter your surname: ")
 
-    password = validate_new_password()
-    password2 = input("Re-enter your password: ")
-    while not password2 == password:
-        print("\nThe passwords do not match, please try again\n")
         password = validate_new_password()
         password2 = input("Re-enter your password: ")
+        while not password2 == password:
+            print("\nThe passwords do not match, please try again\n")
+            password = validate_new_password()
+            password2 = input("Re-enter your password: ")
 
-    acc_num = Bank.acc_num_generator()
+        acc_num = Bank.acc_num_generator()
 
-    acc_type = input("""What account would you like to open?
-1 -\tCurrent Account
-2 -\tSavings Account
-Enter: """)
-    while acc_type not in ["1", "2"]:
-        print("Invalid input, please try again")
+        acc_type = input("""What account would you like to open?
+    1 -\tCurrent Account
+    2 -\tSavings Account
+    Enter: """)
 
-    if acc_type == "1":
-        new_account = CurrentAccount(
-            user_id, password, forename, surname, acc_num)
-    elif acc_type == "2":
-        new_account = SavingsAccount(
-            user_id, password, forename, surname, acc_num)
+        while acc_type not in ["1", "2"]:
+            print("Invalid input, please try again")
 
-    print("Account created successfully")
-    print(f"""Account details:
-Forename:\t{forename}
-Surname:\t{surname}
-User ID:\t{user_id}
-Acc No:\t\t{acc_num}
-Acc Type:\tPLACEHOLDER""")
+        if acc_type == "1":
+            new_account = CurrentAccount(
+                user_id, password, forename, surname, acc_num)
+        elif acc_type == "2":
+            new_account = SavingsAccount(
+                user_id, password, forename, surname, acc_num)
+
+        print("Account created successfully")
+        print(f"""Account details:
+    Forename:\t{forename}
+    Surname:\t{surname}
+    User ID:\t{user_id}
+    Acc No:\t\t{acc_num}
+    Acc Type:\tPLACEHOLDER""")
+
+        users[user_id] = {
+            'forename': forename,
+            'surname': surname,
+            'password': password,
+            'accounts': {}
+        }
+
+        users[user_id]['accounts'][acc_num] = new_account
+
+        write_file()
+
+    else:
+        pass
 
 
 # Login
