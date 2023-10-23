@@ -129,7 +129,7 @@ def registration():
     Forename:\t{forename}
     Surname:\t{surname}
     User ID:\t{user_id}
-    Acc No:\t\t{acc_num}
+    Acc No:\t{acc_num}
     Acc Type:\tPLACEHOLDER""")
 
         users[user_id] = {
@@ -149,7 +149,7 @@ def registration():
 
 # Login
 def login():
-    user_id = input("Enter user_id: ")
+    user_id = input("Enter user id: ")
     password = input("Enter password: ")
 
 
