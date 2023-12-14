@@ -30,10 +30,23 @@ def welcome():
     print("Welcome to FatWest Bank")
 
 
+def main_menu():
+    selection = input("""Please select from one of the following options:
+              1 - Login
+              2 - Register
+              : """)
+    while selection not in ['1', '2']:
+        print("Input is not valid")
+        selection = input("""Please select from one of the following options:
+              1 - Login
+              2 - Register
+              : """)
+
 # -----MAIN PROGRAM-----
+
 
 while True:
     welcome()
-    input("Hi, what's your name?: ")
+    main_menu()
     print("Thanks!")
     exit()
