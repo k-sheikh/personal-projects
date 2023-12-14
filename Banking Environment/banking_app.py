@@ -26,4 +26,14 @@
 
 # -----FUNCTIONS-----
 
+def welcome():
+    print("Welcome to FatWest Bank")
+
+
 # -----MAIN PROGRAM-----
+
+while True:
+    welcome()
+    input("Hi, what's your name?: ")
+    print("Thanks!")
+    exit()
