@@ -26,27 +26,45 @@
 
 # -----FUNCTIONS-----
 
+
+# Welcome message
 def welcome():
-    print("Welcome to FatWest Bank")
+    print("\nWelcome to FatWest Bank")
 
 
+# Main menu
 def main_menu():
-    selection = input("""Please select from one of the following options:
+    user_input = input("""Please select from one of the following options:
               1 - Login
               2 - Register
               : """)
-    while selection not in ['1', '2']:
-        print("Input is not valid")
+    while user_input not in ['1', '2']:
+        print("Input is not valid\n")
         selection = input("""Please select from one of the following options:
               1 - Login
               2 - Register
               : """)
 
-# -----MAIN PROGRAM-----
 
+# Register new user
+def register_new_user():
+    forename = input("Please enter your forename: ")
+    surname = input("Please enter your surname: ")
+    name_validation = input(
+        f"Your name is {forename} {surname}, is this correct? Yes/No: ")
+    while name_validation.lower() != 'yes':
+        print("Please try again")
+        forename = input("Please enter your forename: ")
+        surname = input("Please enter your surname: ")
+        name_validation = input(
+            f"Your name is {forename} {surname}, is this correct? Yes/No: ")
+
+
+# -----MAIN PROGRAM-----
 
 while True:
     welcome()
-    main_menu()
+    # main_menu()
+    register_new_user()
     print("Thanks!")
     exit()
