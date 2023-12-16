@@ -22,6 +22,9 @@
 
 # -----LIBRARIES-----
 
+import random
+
+
 # -----CLASSES-----
 
 # -----FUNCTIONS-----
@@ -60,7 +63,11 @@ def register_new_user():
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
 
 
+def id_num_generator():
+    random.randint(0, 10)
+
 # -----MAIN PROGRAM-----
+
 
 while True:
     welcome()
