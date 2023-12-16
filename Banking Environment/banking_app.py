@@ -61,10 +61,15 @@ def register_new_user():
         surname = input("Please enter your surname: ")
         name_validation = input(
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
+    id_num = id_num_generator()
+    user_id = f"{forename[0].lower()}{surname.lower()}{id_num}"
+    print(f"Your user id is {user_id}")
 
 
+# User id number generator
 def id_num_generator():
-    random.randint(0, 10)
+    return random.randint(1000, 9999)
+
 
 # -----MAIN PROGRAM-----
 
