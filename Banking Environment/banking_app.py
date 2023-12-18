@@ -33,7 +33,8 @@ users = {user_id : {
                     'password' : 'password'
                     'accounts' : {
                                 'account_num' : 12345678
-                                'account_type' :
+                                'account_type' : 'Current Account'
+                                'balance' : 5000
                     }}}
 """
 
