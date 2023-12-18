@@ -2,35 +2,54 @@
 
 # -----PSEUDOCODE-----
 
-# Main Menu
-# 	Welcome, Login, Register, Exit
-# 		Login
-# 			Enter user id, Enter password
-# 				You have no accounts, Create account
-# 					Account type: Savings, Current
-# 					Save Classes to txt
-# 				Select account
-# 					Check balance, Withdraw, Deposit
-# 						Deposit with cash, transfer from another account
-# 				Create new account
-# 					Account type: Savings, Current
-# 					Save Classes to txt
-# 		Register
-# 			Create user id, password
-# 			Verify user id, password
-# 			Check for match, save to txt
+"""
+# Program Structure Overview
+
+Main Menu
+	Welcome, Login, Register, Exit
+		Login
+			Enter user id, Enter password
+				You have no accounts, Create account
+					Account type: Savings, Current
+					Save Classes to txt
+				Select account
+					Check balance, Withdraw, Deposit
+						Deposit with cash, transfer from another account
+				Create new account
+					Account type: Savings, Current
+					Save Classes to txt
+		Register
+			Create user id, password
+			Verify user id, password
+			Check for match, save to txt
+"""
+
+"""
+# Dictionary Structure
+
+users = {user_id : {
+                    'forename' : 'John',
+                    'surname' : 'Smith',
+                    'password' : 'password'
+                    'accounts' : {
+                                'account_num' : 12345678
+                                'account_type' :
+                    }}}
+"""
 
 # -----LIBRARIES-----
-
-import random
 
 
 # -----CLASSES-----
 
 # -----FUNCTIONS-----
 
-
 # Welcome message
+
+
+
+
+import random
 def welcome():
     print("\nWelcome to FatWest Bank")
 
@@ -72,7 +91,6 @@ def id_num_generator():
 
 
 # -----MAIN PROGRAM-----
-
 
 while True:
     welcome()
