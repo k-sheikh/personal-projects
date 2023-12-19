@@ -30,7 +30,7 @@ Main Menu
 users = {user_id : {
                     'forename' : 'John',
                     'surname' : 'Smith',
-                    'password' : 'password'
+                    'password' : 'password123'
                     'accounts' : {
                                 'account_num' : 12345678
                                 'account_type' : 'Current Account'
@@ -40,17 +40,18 @@ users = {user_id : {
 
 # -----LIBRARIES-----
 
+import re
+import random
+import stdiomask
+
+users = {}
+
 
 # -----CLASSES-----
 
 # -----FUNCTIONS-----
 
 # Welcome message
-
-
-
-
-import random
 def welcome():
     print("\nWelcome to FatWest Bank")
 
@@ -83,9 +84,30 @@ def register_new_user():
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
     id_num = id_num_generator()
     user_id = f"{forename[0].lower()}{surname.lower()}{id_num}"
-    print(f"Your user id is {user_id}")
-
-
+    print(f"Your user id is {user_id}\n")
+    password = stdiomask.getpass("""Please create a password.
+Passwords must be alphanumerical,
+must contain at least one uppercase letter,
+must contain at least one lowercase letter,
+must contain at least 8 characters.
+Create a password now:  """, mask="*")
+    while True:
+        password2 = stdiomask.getpass("\nPlease re-enter your password: ")
+        if (len(password) >= 8 and
+        re.search("[a-z]", password) and
+        re.search("[A-Z]", password) and
+        re.search("[0-9]", password) and
+        password == password2):
+            break
+        else:
+            password = stdiomask.getpass("""\nInvalid password, please try again.
+Passwords must match and be alphanumerical,
+must contain at least one uppercase letter,
+must contain at least one lowercase letter,
+must contain at least 8 characters.
+Create a password now: """, mask="*")
+            
+        
 # User id number generator
 def id_num_generator():
     return random.randint(1000, 9999)
