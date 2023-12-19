@@ -83,10 +83,12 @@ def register_new_user():
         name_validation = input(
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
     
+    # User id generator
     id_num = id_num_generator()
     user_id = f"{forename[0].lower()}{surname[:5].lower()}{id_num}"
     print(f"Your user id is {user_id}\n")
     
+    # Password and validation
     password = stdiomask.getpass("""Please create a password.
 Passwords must be alphanumerical,
 must contain at least one uppercase letter,
@@ -109,9 +111,17 @@ must contain at least one lowercase letter,
 must contain at least 8 characters.
 Create a password now: """, mask="*")
     
+    # Add user data to dictionary
+    user_data = {
+        'forename' : forename,
+        'surname' : surname,
+        'password' : password
+        }
+    users[user_id] = user_data
+
     print(f"\nCongratulations {forename}, your account has been created successfully.")
-            
-        
+
+
 # User id number generator
 def id_num_generator():
     return random.randint(1000, 9999)
