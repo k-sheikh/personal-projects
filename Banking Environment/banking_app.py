@@ -38,6 +38,7 @@ users = {user_id : {
                     }}}
 """
 
+
 # -----LIBRARIES-----
 
 import re
@@ -68,11 +69,15 @@ def main_menu():
               1 - Login
               2 - Register
               : """)
+    if user_input == '1':
+        pass
+    elif user_input == '2':
+        register_new_user()
 
 
 # Register new user
 def register_new_user():
-    forename = input("Please enter your forename: ")
+    forename = input("\nPlease enter your forename: ")
     surname = input("Please enter your surname: ")
     name_validation = input(
         f"Your name is {forename} {surname}, is this correct? Yes/No: ")
@@ -131,7 +136,7 @@ def id_num_generator():
 
 while True:
     welcome()
-    # main_menu()
-    register_new_user()
+    main_menu()
+    # register_new_user()
     print("Thanks!")
     exit()
