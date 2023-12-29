@@ -94,27 +94,31 @@ def register_new_user():
     print(f"Your user id is {user_id}\n")
     
     # Password and validation
-    password = stdiomask.getpass("""Please create a password.
-Passwords must be alphanumerical,
+    print("Please create a password.")
+    while True:
+        password = stdiomask.getpass("""Passwords must be alphanumerical,
 must contain at least one uppercase letter,
 must contain at least one lowercase letter,
 must contain at least 8 characters.
 Create a password now:  """, mask="*")
-    while True:
-        password2 = stdiomask.getpass("Please re-enter your password: ")
+        
+        # Check password criteria
         if (len(password) >= 8 and
-        re.search("[a-z]", password) and
-        re.search("[A-Z]", password) and
-        re.search("[0-9]", password) and
-        password == password2):
-            break
+            re.search("[a-z]", password) and
+            re.search("[A-Z]", password) and
+            re.search("[0-9]", password)):
+            
+            # Re-enter the password
+            password2 = stdiomask.getpass("Please re-enter your password: ")
+            
+            # Check if passwords match
+            if password == password2:
+                break
+            else:
+                print("\nPasswords do not match. Please start again.")
         else:
-            password = stdiomask.getpass("""\nInvalid password, please try again.
-Passwords must match and be alphanumerical,
-must contain at least one uppercase letter,
-must contain at least one lowercase letter,
-must contain at least 8 characters.
-Create a password now: """, mask="*")
+            print("\nInvalid password, please try again.")
+
     
     # Add user data to dictionary
     user_data = {
@@ -138,5 +142,5 @@ while True:
     welcome()
     main_menu()
     # register_new_user()
-    print("Thanks!")
-    exit()
+    # print("Thanks!")
+    # exit()
