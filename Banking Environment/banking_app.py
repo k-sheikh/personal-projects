@@ -60,19 +60,24 @@ def welcome():
 # Main menu
 def main_menu():
     user_input = input("""Please select from one of the following options:
-              1 - Login
-              2 - Register
-              : """)
-    while user_input not in ['1', '2']:
-        print("Input is not valid\n")
-        selection = input("""Please select from one of the following options:
-              1 - Login
-              2 - Register
-              : """)
+1 - Login
+2 - Register
+3 - Exit
+: """)
+    while user_input not in ['1', '2', '3']:
+        print("\nInput is not valid.")
+        user_input = input("""Please select from one of the following options:
+1 - Login
+2 - Register
+3 - Exit
+: """)
     if user_input == '1':
         pass
     elif user_input == '2':
         register_new_user()
+    elif user_input == '3':
+        print("\nThankyou for banking with FatWest. Goodbye!")
+        exit()
 
 
 # Register new user
