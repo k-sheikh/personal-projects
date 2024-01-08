@@ -50,6 +50,53 @@ users = {}
 
 # -----CLASSES-----
 
+class User:
+    def __init__(self, forename, surname, user_id, password):
+        self.forename = forename
+        self.surname = surname
+        self.user_id = user_id
+        self.password = password
+        self.account = {}
+
+    def add_account(self, account):
+        self.accounts[account.account_number] = account
+
+
+class Account:
+    def __init__(self, account_number, account_type, balance = 0):
+        self.account_number = account_number
+        self.account_type = account_type
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+    
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            return self.balance
+        else:
+            raise ValueError("Insufficient funds")
+        
+
+class Bank:
+    def __init__(self):
+        self.users = {}
+
+    def register_user(self, forename, surname, password):
+        user_id = generate_user_id(forename, surname)
+        new_user = User(forename, surname, user_id, password)
+        self.users[user_id] = new_user
+        return new_user
+    
+    def create_account(self, user_id, account_type):
+        account_number = generate_account_number()
+        account = Account(account_number, account_type)
+        self.users[user_id].add_account(account)
+        return account
+
+
 # -----FUNCTIONS-----
 
 # Welcome message
