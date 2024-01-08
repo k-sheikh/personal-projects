@@ -97,7 +97,6 @@ class Bank:
         self.users[user_id].add_account(account)
         return account
 
-
 # -----UTILITY FUNCTIONS-----
 
 def generate_user_id(forename, surname):
@@ -116,7 +115,7 @@ def welcome():
 
 
 # Main menu
-def main_menu():
+def main_menu(bank):
     user_input = input("""Please select from one of the following options:
 1 - Login
 2 - Register
@@ -132,7 +131,7 @@ def main_menu():
     if user_input == '1':
         pass
     elif user_input == '2':
-        register_new_user()
+        register_new_user(bank)
     elif user_input == '3':
         print("\nThankyou for banking with FatWest. Goodbye!")
         exit()
@@ -152,7 +151,7 @@ def register_new_user(bank):
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
         
     # Password and validation
-    print("Please create a password.")
+    print("\nPlease create a password.")
     while True:
         password = stdiomask.getpass("""Passwords must be alphanumerical,
 must contain at least one uppercase letter,
@@ -178,14 +177,16 @@ Create a password now:  """, mask="*")
             print("\nInvalid password, please try again.")
 
     new_user = bank.register_user(forename, surname, password)
-    print(f"\nCongratulations {forename}, your account has been created successfully.")
+    user_id = new_user.user_id
+
+    print(f"""\nCongratulations {forename}, your account has been created successfully.
+    Your user id is {user_id}. Please keep this safe.""")
 
 
 # -----MAIN PROGRAM-----
 
+fatWestBank = Bank()
+
 while True:
     welcome()
-    main_menu()
-    # register_new_user()
-    # print("Thanks!")
-    # exit()
+    main_menu(fatWestBank)
