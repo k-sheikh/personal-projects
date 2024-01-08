@@ -138,7 +138,7 @@ def main_menu():
 
 
 # Register new user
-def register_new_user():
+def register_new_user(bank):
     forename = input("\nPlease enter your forename: ")
     surname = input("Please enter your surname: ")
     name_validation = input(
@@ -149,12 +149,7 @@ def register_new_user():
         surname = input("Please enter your surname: ")
         name_validation = input(
             f"Your name is {forename} {surname}, is this correct? Yes/No: ")
-    
-    # User id generator
-    id_num = id_num_generator()
-    user_id = f"{forename[0].lower()}{surname[:5].lower()}{id_num}"
-    print(f"\nYour user id is {user_id}\n")
-    
+        
     # Password and validation
     print("Please create a password.")
     while True:
@@ -181,15 +176,7 @@ Create a password now:  """, mask="*")
         else:
             print("\nInvalid password, please try again.")
 
-    
-    # Add user data to dictionary
-    user_data = {
-        'forename' : forename,
-        'surname' : surname,
-        'password' : password
-        }
-    users[user_id] = user_data
-
+    new_user = bank.register_user(forename, surname, password)
     print(f"\nCongratulations {forename}, your account has been created successfully.")
 
 
