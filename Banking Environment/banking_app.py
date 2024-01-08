@@ -97,6 +97,13 @@ class Bank:
         return account
 
 
+# -----UTILITY FUNCTIONS-----
+
+def generate_user_id(forename, surname):
+    return f"{forename[0].lower()}{surname[:5].lower()}{random.randint(1000, 9999)}"
+    
+
+
 # -----FUNCTIONS-----
 
 # Welcome message
@@ -181,11 +188,6 @@ Create a password now:  """, mask="*")
     users[user_id] = user_data
 
     print(f"\nCongratulations {forename}, your account has been created successfully.")
-
-
-# User id number generator
-def id_num_generator():
-    return random.randint(1000, 9999)
 
 
 # -----MAIN PROGRAM-----
