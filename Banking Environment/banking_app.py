@@ -41,6 +41,7 @@ users = {user_id : {
 
 # -----LIBRARIES-----
 
+from sys import exit
 import re
 import random
 import stdiomask
@@ -59,7 +60,7 @@ class User:
         self.account = {}
 
     def add_account(self, account):
-        self.accounts[account.account_number] = account
+        self.account[account.account_number] = account
 
 
 class Account:
