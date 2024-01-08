@@ -96,7 +96,7 @@ def register_new_user():
     # User id generator
     id_num = id_num_generator()
     user_id = f"{forename[0].lower()}{surname[:5].lower()}{id_num}"
-    print(f"Your user id is {user_id}\n")
+    print(f"\nYour user id is {user_id}\n")
     
     # Password and validation
     print("Please create a password.")
