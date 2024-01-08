@@ -180,7 +180,7 @@ Create a password now:  """, mask="*")
     user_id = new_user.user_id
 
     print(f"""\nCongratulations {forename}, your account has been created successfully.
-    Your user id is {user_id}. Please keep this safe.""")
+Your user id is {user_id}. Please keep this information safe.""")
 
 
 # -----MAIN PROGRAM-----
