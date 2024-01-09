@@ -1,3 +1,8 @@
+# -----LIBRARIES-----
+
+import random
+
+
 # -----UTILITY FUNCTIONS-----
 
 def generate_user_id(forename, surname):

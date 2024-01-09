@@ -87,11 +87,11 @@ def register_new_user(bank):
     name_validation = input(
         f"Your name is {forename} {surname}, is this correct? Yes/No: ")
     while name_validation.lower() != 'yes':
-        print("Please try again")
+        print("\nPlease try again")
         forename = input("Please enter your forename: ")
         surname = input("Please enter your surname: ")
         name_validation = input(
-            f"Your name is {forename} {surname}, is this correct? Yes/No: ")
+            f"\nYour name is {forename} {surname}, is this correct? Yes/No: ")
         
     # Password and validation
     print("\nPlease create a password.")
