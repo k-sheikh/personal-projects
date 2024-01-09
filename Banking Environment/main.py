@@ -1,20 +1,11 @@
 # BANKING ENVIRONMENT
 
-# -----PSEUDOCODE-----
-
-"""
-
-"""
-
-
 # -----LIBRARIES-----
 
 from bank import Bank
 from sys import exit
 import re
 import stdiomask
-
-users = {}
 
 
 # -----FUNCTIONS-----
