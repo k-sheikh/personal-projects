@@ -44,7 +44,6 @@ users = {user_id : {
 from bank import Bank
 from sys import exit
 import re
-import random
 import stdiomask
 
 users = {}
@@ -128,8 +127,8 @@ Your user id is {user_id}. Please keep this information safe.""")
 
 # -----MAIN PROGRAM-----
 
-fatWestBank = Bank()
-
-while True:
-    welcome()
-    main_menu(fatWestBank)
+if __name__ == "__main__":
+    fatWestBank = Bank()
+    while True:
+        welcome()
+        main_menu(fatWestBank)
