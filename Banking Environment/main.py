@@ -43,14 +43,17 @@ def main_menu(bank):
 
 # Register new user
 def register_new_user(bank):
-    forename, surname = get_user_name()
-    password = get_user_password()
+    try:
+        forename, surname = get_user_name()
+        password = get_user_password()
 
-    new_user = bank.register_user(forename, surname, password)
-    user_id = new_user.user_id
+        new_user = bank.register_user(forename, surname, password)
+        user_id = new_user.user_id
 
-    print(f"""\nCongratulations {forename}, your account has been created successfully.
+        print(f"""\nCongratulations {forename}, your account has been created successfully.
 Your user id is {user_id}. Please keep this information safe.""")
+    except Exception as e:
+        print(f"An error occurred during registration: {e}")
 
 
 def get_user_name():
@@ -87,6 +90,7 @@ def validate_password(password):
             re.search("[a-z]", password) and
             re.search("[A-Z]", password) and
             re.search("[0-9]", password))
+
 
 # -----MAIN PROGRAM-----
 
