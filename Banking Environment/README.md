@@ -34,7 +34,7 @@ FatWest Bank Application is a simple, console-based banking system implemented i
 Run the application using Python:
 
 ```
-python banking_app.py
+python main.py
 ```
 
 Follow the on-screen prompts to navigate through the application.
