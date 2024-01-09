@@ -15,22 +15,25 @@ def welcome():
     print("\nWelcome to FatWest Bank")
 
 
+# Input validator
+def get_validated_input(prompt, valid_options):
+    user_input = input(prompt)
+    while user_input not in valid_options:
+        print("\nInput is not valid.")
+        user_input = input(prompt)
+    return user_input
+
+
 # Main menu
 def main_menu(bank):
     user_input = input("""Please select from one of the following options:
 1 - Login
 2 - Register
 3 - Exit
-: """)
-    while user_input not in ['1', '2', '3']:
-        print("\nInput is not valid.")
-        user_input = input("""Please select from one of the following options:
-1 - Login
-2 - Register
-3 - Exit
-: """)
+: """, ['1', '2', '3'])
+    
     if user_input == '1':
-        pass
+        pass  # Placeholder for future login functionality
     elif user_input == '2':
         register_new_user(bank)
     elif user_input == '3':
