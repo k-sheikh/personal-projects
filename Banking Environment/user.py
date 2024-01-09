@@ -4,7 +4,7 @@ class User:
         self.surname = surname
         self.user_id = user_id
         self.password = password
-        self.account = {}
+        self.accounts = {}
 
-    def add_account(self, account):
-        self.account[account.account_number] = account
+    def add_account(self, accounts):
+        self.accounts[accounts.account_number] = accounts
