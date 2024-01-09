@@ -26,7 +26,7 @@ def get_validated_input(prompt, valid_options):
 
 # Main menu
 def main_menu(bank):
-    user_input = input("""Please select from one of the following options:
+    user_input = get_validated_input("""Please select from one of the following options:
 1 - Login
 2 - Register
 3 - Exit
@@ -43,42 +43,8 @@ def main_menu(bank):
 
 # Register new user
 def register_new_user(bank):
-    forename = input("\nPlease enter your forename: ")
-    surname = input("Please enter your surname: ")
-    name_validation = input(
-        f"Your name is {forename} {surname}, is this correct? Yes/No: ")
-    while name_validation.lower() != 'yes':
-        print("\nPlease try again")
-        forename = input("Please enter your forename: ")
-        surname = input("Please enter your surname: ")
-        name_validation = input(
-            f"\nYour name is {forename} {surname}, is this correct? Yes/No: ")
-        
-    # Password and validation
-    print("\nPlease create a password.")
-    while True:
-        password = stdiomask.getpass("""Passwords must be alphanumerical,
-must contain at least one uppercase letter,
-must contain at least one lowercase letter,
-must contain at least 8 characters.
-Create a password now:  """, mask="*")
-        
-        # Check password criteria
-        if (len(password) >= 8 and
-            re.search("[a-z]", password) and
-            re.search("[A-Z]", password) and
-            re.search("[0-9]", password)):
-            
-            # Re-enter the password
-            password2 = stdiomask.getpass("Please re-enter your password: ")
-            
-            # Check if passwords match
-            if password == password2:
-                break
-            else:
-                print("\nPasswords do not match. Please start again.")
-        else:
-            print("\nInvalid password, please try again.")
+    forename, surname = get_user_name()
+    password = get_user_password()
 
     new_user = bank.register_user(forename, surname, password)
     user_id = new_user.user_id
@@ -86,6 +52,41 @@ Create a password now:  """, mask="*")
     print(f"""\nCongratulations {forename}, your account has been created successfully.
 Your user id is {user_id}. Please keep this information safe.""")
 
+
+def get_user_name():
+    while True:
+        forename = input("\nPlease enter your forename: ")
+        surname = input("Please enter your surname: ")
+        name_validation = input(
+            f"Your name is {forename} {surname}, is this correct? Yes/No: ")
+        if name_validation.lower() == 'yes':
+            return forename, surname
+
+
+def get_user_password():
+    print("\nPlease create a password.")
+    while True:
+        password = stdiomask.getpass("""Passwords must be alphanumerical,
+must contain at least one uppercase letter,
+must contain at least one lowercase letter,
+must contain at least 8 characters.
+Create a password now:  """, mask="*")
+
+        if validate_password(password):
+            password2 = stdiomask.getpass("Please re-enter your password: ")
+            if password == password2:
+                return password
+            else:
+                print("\nPasswords do not match. Please start again.")
+        else:
+            print("\nInvalid password, please try again.")
+
+
+def validate_password(password):
+    return (len(password) >= 8 and
+            re.search("[a-z]", password) and
+            re.search("[A-Z]", password) and
+            re.search("[0-9]", password))
 
 # -----MAIN PROGRAM-----
 
