@@ -18,7 +18,7 @@ def initialise_database():
                                     )"""
     
     sql_create_accounts_table = """CREATE TABLE IF NOT EXISTS accounts (
-                                        account_number INTEGER PRIMARY KET,
+                                        account_number INTEGER PRIMARY KEY,
                                         user_id TEXT NOT NULL,
                                         account_type TEXT NOT NULL,
                                         balance REAL NOT NULL,
