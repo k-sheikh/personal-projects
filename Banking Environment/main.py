@@ -95,12 +95,9 @@ def validate_password(password):
 # -----MAIN PROGRAM-----
 
 if __name__ == "__main__":
-    try:
-        fatWestBank = Bank()
-        while True:
-            welcome()
-            main_menu(fatWestBank)
-    except KeyboardInterrupt:
-        print("\nProgram terminated by the user.")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+    from database import initialise_database
+    initialise_database()  # Initialise database on program start
+    fatWestBank = Bank()
+    while True:
+        welcome()
+        main_menu(fatWestBank)
