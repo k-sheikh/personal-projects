@@ -9,10 +9,10 @@ FatWest Bank Application is a sophisticated, console-based banking system implem
 ### Features
 
 - **User Registration and Login**: Secure system for user authentication.
-- **Account Management**: Users can create and manage multiple types of accounts (e.g., Savings, Checking).
+- **Account Management**: Users can create and manage multiple types of accounts (e.g., Savings, Current).
 - **Deposits and Withdrawals**: Facilitates basic banking transactions.
 - **Transaction Validation**: Ensures the integrity and security of transactions.
-- **Database Integration**: Utilizes a database for persistent data storage and retrieval.
+- **Database Integration**: Utilises a database for persistent data storage and retrieval.
 - **Modular Code Structure**: Codebase is organized into distinct modules:
   - `main`: Main application entry point.
   - `user`: Manages user data and authentication.
